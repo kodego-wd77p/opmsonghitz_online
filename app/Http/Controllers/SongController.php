@@ -129,8 +129,13 @@ class SongController extends Controller
             'song_title' => $request->song_title,
             'album_title' => $request->album_title,
             'release_year' => $request->release_year,
-            'artist' => $request->artist
+            'artist' => $request->artist,
+            'image' => $request->image,
+            'song_file' => $request->song_file
         ]);
+
+        // $validatedInputs['image'] = $request->file('image')->store('public/images');
+        // $validatedInputs['song_file'] = $request->file('song_file')->store('public/files');
 
         return back()->with('success', 'Song Updated Successfully!');
     }

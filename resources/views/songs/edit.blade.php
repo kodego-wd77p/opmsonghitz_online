@@ -36,6 +36,20 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Choose An Image</label>
+                        <input class="form-control" type="file" id="formFile" name="image" value={{ old('image',$song->image) }}>
+                        @error('image')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Choose A PDF File</label>
+                        <input class="form-control" type="file" id="formFile" name="song_file" value={{ old('song_file',$song->song_file)}}>
+                        @error('song_file')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
                     <div class="d-flex justify-content-md-center m-sm-4 d-inline-block">
                         <button type="button" onclick='window.location.href = "/songs"' class="m-sm-1 btn btn-danger">CANCEL</button>
                         <button type="submit" class="m-sm-1 btn btn-secondary ">UPDATE</button>
