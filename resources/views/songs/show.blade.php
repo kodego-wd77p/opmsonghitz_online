@@ -19,6 +19,7 @@
         </div>
         @auth
         <div>
+            <button type="button" onclick='window.location.href = "/songs/{{$song->id}}/play"' class="m-sm-1 btn btn-secondary">JAM SONG</button>
             <button type="button" onclick='window.location.href = "/songs/{{$song->id}}/edit"' class="m-sm-1 btn btn-secondary">EDIT</button>
             {{-- <form action="/songs/{{$song->id}}" method="POST">
                 @csrf
